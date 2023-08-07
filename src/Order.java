@@ -8,7 +8,7 @@ public class Order {
     private boolean validIngredient = false;
     private int pizzaNum;
     private int pizzaSize;
-    private String errorMessage = "Invalid input. Try again!\n";
+    private final String errorMessage = "Invalid input. Try again!\n";
     public void start(){
         System.out.println("Hello and welcome to the fastest pizza delivery service on earth!");
         selectPizza();
@@ -50,9 +50,6 @@ public class Order {
             }
         }
     }
-    public void setName(int pizza){
-
-    }
     public void  selectSize(){
         while(!validSize){
             System.out.println("Please select the size of the pizza.\n" +
@@ -73,19 +70,6 @@ public class Order {
                 validSize = false;
             }
         }
-    }
-    public void setSize(int size){
-        /*switch (size){
-            case 1:
-                this.size = 30;
-                break;
-            case 2:
-                this.size = 35;
-                break;
-            case 3:
-                this.size = 40;
-                break;
-        }*/
     }
 
     public  void checkout(){
